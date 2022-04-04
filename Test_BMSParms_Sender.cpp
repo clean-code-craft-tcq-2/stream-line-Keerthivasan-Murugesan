@@ -5,4 +5,5 @@
 
 TEST_CASE("Tests to be developed") {
 	REQUIRE(1);
+    BMS_ParametersSender();
 }
