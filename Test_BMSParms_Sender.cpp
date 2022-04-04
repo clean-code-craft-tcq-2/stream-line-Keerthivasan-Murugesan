@@ -3,3 +3,6 @@
 #include "test/catch.hpp"
 #include "BMS_ParametersSender.h"
 
+TEST_CASE("Tests to be developed") {
+	REQUIRE(1);
+}
