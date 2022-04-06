@@ -10,7 +10,7 @@ void print(float temperature, float SOC, float CR){
 void ReadBMSParamsFromFile(float* Temperature, float* SOC, float* ChargeRate)
 {
     float Temp_reading, SOC_reading,CR_reading;
-    FILE* fp= fopen("./BMS_Sender/BMS_Parameters.txt","r");  
+    FILE* fp= fopen("./BMS_Parameters.txt","r");  
 
     if (NULL == fp)
     {
