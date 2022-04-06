@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 void print(float temperature, float SOC, float CR){
-    printf(" Temperature : %.2f , State of Charge : %.2f , Charge Rate : %.2f \n",Temperature,SOC,ChargeRate);
+    printf(" Temperature : %.2f , State of Charge : %.2f , Charge Rate : %.2f \n",temperature,SOC,CR);
 }
 
 void ReadBMSParamsFromFile(float* Temperature, float* SOC, float* ChargeRate)
