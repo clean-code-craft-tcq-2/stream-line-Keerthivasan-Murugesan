@@ -9,13 +9,9 @@ def ReadDataFromSender():
     return values_from_sender
 
 def FormatDataFromSender(oneReading):
-    print(oneReading)
-    temp = float([(param.split(":")[-1]).strip() for param in oneReading if "Temperature" in param ][0])
-    SoC = float([(param.split(":")[-1]).strip() for param in oneReading if "State of Charge" in param ][0])
-    ChargeRate = float([(param.split(":")[-1]).strip() for param in oneReading if "Charge Rate" in param ][0])
-    print (ChargeRate)
-    print(temp, SoC, ChargeRate)
-    print([{'temp':temp, 'SoC':SoC, 'ChargeRate':ChargeRate}])
+    temp = float((oneReading[0].split(":")[-1]).strip())
+    SoC = float((oneReading[1].split(":")[-1]).strip())
+    ChargeRate = float((oneReading[2].split(":")[-1]).strip())
     return [{'temp':temp, 'SoC':SoC, 'ChargeRate':ChargeRate}]
 
 def FindRangeValues(temp, SoC, ChargeRate):
