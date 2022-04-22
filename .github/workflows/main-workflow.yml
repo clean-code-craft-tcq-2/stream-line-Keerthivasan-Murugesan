@@ -53,7 +53,13 @@ jobs:
         coverage run --branch StreamLine_receiver.test.py  
         coverage html
         coverage report
-
+    
+    - name: build sender
+      run: g++ -Wall -Wextra -fprofile-arcs BMS_senderMain.c BMS_ParametersSender.c -o sender 
+      
+    - name: run receiver with sender data
+      run: ./sender | python StreamLine_receiver.py
+    
     - name: Upload coverage
       uses: actions/upload-artifact@v2
       with:
