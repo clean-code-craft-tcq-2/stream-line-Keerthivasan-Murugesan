@@ -1,6 +1,6 @@
 #include "BMS_ParametersSender.h"
 
-void main(){
+int main(){
   BMS_ParametersSender();
   return 0;
   }
