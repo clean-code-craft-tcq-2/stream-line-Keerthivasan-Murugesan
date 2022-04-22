@@ -58,3 +58,6 @@ def CalculateStaticticsOfSenderData():
     (min_temp, max_temp, min_SoC, max_SoC, min_ChargeRate, max_ChargeRate) = PrintRangesOfParamsIntoConsole(values_from_sender)
     (avg_temp, avg_SoC, avg_ChargeRate) = PrintMovingAveragesintoConsole(values_from_sender)
     return [(min_temp, max_temp, min_SoC, max_SoC, min_ChargeRate, max_ChargeRate),(avg_temp, avg_SoC, avg_ChargeRate)]
+
+if __name__ == "__main__":
+    CalculateStaticticsOfSenderData()
