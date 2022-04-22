@@ -4,8 +4,9 @@ from statistics import mean
 def ReadDataFromSender():
     values_from_sender =[]
     for value in sys.stdin:
-        SplitValues = value.split(',')
-        values_from_sender.append(FormatDataFromSender(SplitValues))
+        SplittedValues = value.split(',')
+        print(SplittedValues)
+        values_from_sender.append(FormatDataFromSender(SplittedValues))
     return values_from_sender
 
 def FormatDataFromSender(oneReading):
