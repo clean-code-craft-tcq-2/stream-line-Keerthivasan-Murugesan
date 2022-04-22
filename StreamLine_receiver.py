@@ -4,12 +4,13 @@ from statistics import mean
 def ReadDataFromSender():
     values_from_sender =[]
     for value in sys.stdin:
+         print(value)
         SplittedValues = value.split(',')
-        print(SplittedValues)
         values_from_sender.append(FormatDataFromSender(SplittedValues))
     return values_from_sender
 
 def FormatDataFromSender(oneReading):
+    print(oneReading)
     temp = float((oneReading[0].split(":")[-1]).strip())
     SoC = float((oneReading[1].split(":")[-1]).strip())
     ChargeRate = float((oneReading[2].split(":")[-1]).strip())
